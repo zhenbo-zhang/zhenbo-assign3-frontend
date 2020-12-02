@@ -26,7 +26,11 @@ class RedirectPage extends React.Component {
                     window.location.replace('/');
                 } else {
                     this.setState({ validMsg: 'Redirecting...' });
-                    window.location.replace(resp.data);
+                    if (resp.data.startsWith("http")) {
+                        window.location.replace(resp.data);
+                    } else {
+                        window.location.replace("//"+resp.data);
+                    }
                 }
             })
             .catch(error => {
