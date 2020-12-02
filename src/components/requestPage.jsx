@@ -112,6 +112,10 @@ class RequestPage extends React.Component {
                                 onChange={e => this.onChange('originalUrl', e)}
                                 required
                             />
+                        </div>
+                    </div>
+                    <div className="option-container">
+                        <div className="options">
                             <input
                                 className="option"
                                 type="text"
@@ -120,6 +124,10 @@ class RequestPage extends React.Component {
                                 placeholder="Custom URL Brand"
                                 onChange={e => this.onChange('uniquePathId', e)}
                             />
+                        </div>
+                    </div>
+                    <div className="option-container">
+                        <div className="options">
                             <button
                                 className="button"
                                 type="submit"
@@ -129,8 +137,10 @@ class RequestPage extends React.Component {
                         </div>
                     </div>
                     <div className="option-container">
-                        <h4>{this.state.msg}</h4>
-                        <h4>{this.state.shortenedURL}</h4>
+                        <div className="options">
+                            <h4>{this.state.msg}</h4>
+                            <h4>{this.state.shortenedURL}</h4>
+                        </div>
                     </div>
                 </div>
             </div>

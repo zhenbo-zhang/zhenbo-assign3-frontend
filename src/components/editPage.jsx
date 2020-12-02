@@ -145,6 +145,10 @@ class EditPage extends React.Component {
                                         }
                                         required
                                     />
+                                </div>
+                            </div>
+                            <div className="option-container">
+                                <div className="options">
                                     <button
                                         className="button"
                                         type="submit"
@@ -152,6 +156,8 @@ class EditPage extends React.Component {
                                         Update URL
                                     </button>
                                 </div>
+                            </div>
+                            <div className="option-container">
                                 <div className="options">
                                     <button
                                         className="button"
@@ -160,12 +166,14 @@ class EditPage extends React.Component {
                                         Delete this entry
                                     </button>
                                 </div>
-                                <div className="option-container">
+                            </div>
+                            <div className="option-container">
+                                <div className="options">
                                     <h4>{this.state.msg}</h4>
                                 </div>
                             </div>
+                            </div>
                         </div>
-                    </div>
                 )}
             </div>
         );
