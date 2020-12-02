@@ -15,7 +15,7 @@ class RequestPage extends React.Component {
     }
 
     async onSubmit() {
-        await Axios.get(this.state.originalUrl).catch(() => {
+        await Axios.get("https://cors-anywhere.herokuapp.com/".concat(this.state.originalUrl)).catch(() => {
             this.setState({
                 shortenedURL: '',
                 msg: 'The URL you entered is not valid.',
