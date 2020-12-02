@@ -51,7 +51,7 @@ class RedirectPage extends React.Component {
 RedirectPage.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.shape({
-            uniquePathId: PropTypes.number.isRequired,
+            uniquePathId: PropTypes.string.isRequired,
         }),
     }),
 };

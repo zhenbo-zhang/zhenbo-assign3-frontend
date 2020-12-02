@@ -41,7 +41,7 @@ class EditPage extends React.Component {
             match: { params },
         } = this.props;
 
-        await Axios.get(this.state.newUrl).catch(() => {
+        await Axios.get("https://cors-anywhere.herokuapp.com/".concat(this.state.newUrl)).catch(() => {
             this.setState({
                 msg: 'The URL you entered is not valid.',
                 validUrl: false,
@@ -183,7 +183,7 @@ class EditPage extends React.Component {
 EditPage.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.shape({
-            uniquePathId: PropTypes.number.isRequired,
+            uniquePathId: PropTypes.string.isRequired,
         }),
     }),
 };
